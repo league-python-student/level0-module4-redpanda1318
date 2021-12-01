@@ -25,17 +25,28 @@ def draw():
     global y
     
     # 1. Use the background() function to draw the donkey
+    if mouseX > 21 and mouseX < 178 and mouseY >20 and mouseY < 219:
+    
+        background(donkey)
     
     # 2. Use the rect() function to draw a box in the upper left
     # corner of the screen:
     # rect(0, 0, 30, 30)
+    rect(20,20,160,200)
     
     # 3. Now find the x and y coordinates where the tail attaches
     # to the donkey and draw another box with a side of 50
-    
+    rect(680,150,50,50)
     # 4. Change your code so the donkey is only shown when the
     # mouse is inside the corner bounding box. 
-    #
+    if mousePressed:
+        println("mouseX"+str(mouseX))
+        println("mouseY"+str(mouseY))
+    
+    #left is 21, right is 178, top is 20, bottom is 219
+    
+    
+    
     # Hint: check if mouseX is greater than 0 and less than 30
     # and y is greater than 0 and less than 30
     
