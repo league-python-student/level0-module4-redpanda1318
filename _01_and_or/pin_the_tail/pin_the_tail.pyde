@@ -3,6 +3,8 @@ The player of the game has to click the mouse where the donkey's
 tail will go. The problem is, the picture keeps disappearing!
 """
 
+
+
 def setup():
     size(800, 600)
     
@@ -20,14 +22,20 @@ def setup():
     
     noStroke()
     
+    global place 
+    place = False
+    
 def draw():
     global x
     global y
-    
+    global place
     # 1. Use the background() function to draw the donkey
     if mouseX > 21 and mouseX < 178 and mouseY >20 and mouseY < 219:
     
         background(donkey)
+        
+    else:
+        background("#AFAFAF")
     
     # 2. Use the rect() function to draw a box in the upper left
     # corner of the screen:
@@ -42,6 +50,8 @@ def draw():
     if mousePressed:
         println("mouseX"+str(mouseX))
         println("mouseY"+str(mouseY))
+        
+
     
     #left is 21, right is 178, top is 20, bottom is 219
     
@@ -56,10 +66,22 @@ def draw():
     # 6. Use the image() method to draw the tail at the mouseX
     # and mouseY location. For example,
     # image(tail, mouseX, mouseY)
+   
+    
+    if place:
+        image(tail,x,y)
+        
+    else:
+        image(tail, mouseX, mouseY)
     
     # 7. Now, adjust your code so the tail sticks when you click the
     # mouse (this means it will no longer move when the mouse moves)
     #
+    if mousePressed and not place :
+        place = True
+        x = mouseX
+        y = mouseY
+        
     # Hint: you will need to use the mousePressed variable and set the
     # x and y variables declared in setup()
         
