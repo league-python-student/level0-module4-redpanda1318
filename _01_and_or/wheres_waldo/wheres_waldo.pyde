@@ -31,14 +31,23 @@ def draw():
     if mousePressed:
         println("mouseX"+str(mouseX))
         println("mouseY"+str(mouseY))
-  
+
+# x = 396
+# y = 238
+# x = 403
+# y = 237
+
         # Use this print statement to help you find the location
         # of Waldo to use in the code below
+        
+    
     
         # Check if the location of the mouse is anywhere on the image of Waldo.
         # If it is, print “Waldo found!”  Use the text() command to write it
         # on the sketch.
-          
+
+    if mouseX > 396 and mouseX < 403 and mouseY >238 and mouseY < 237 and mousePressed:
+        print("Waldo found!)
             # Use the play_woohoo() method below.
         
         # However, if the mouse is not on Waldo, print "Not here!" 
