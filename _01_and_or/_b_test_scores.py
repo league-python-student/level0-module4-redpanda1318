@@ -33,18 +33,18 @@ if __name__ == '__main__':
     #  corresponding letter grade back to the user. Also, give a different
     #  message according to their grade. Example, for an 'A' grade:
     #  "Wow! You must have studied really hard for those tests!"
-    if average >=89.5 and <=100:
+    if average >=89.5 and average <=100:
         print("Wow! You got an A, good job!")
 
-    if average >=79.5 and <89.5:
+    if average >=79.5 and average <89.5:
         print("Nice! You got a B!")
 
-    if average >=69.5 and <79.5:
+    if average >=69.5 and average <79.5:
         print("At least you didn't fail and got a C!")
 
-    if average >=59.5 and <69.5:
+    if average >=59.5 and average <69.5:
         print("You can try harder next time but you got a D!")
 
-    if average <59.5:
-        print"Everybody fails at some point but you can still try harder next time to not get a F!"
+    if average < 59.5:
+        print("Everybody fails at some point but you can still try harder next time to not get a F!")
     pass

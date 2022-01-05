@@ -8,12 +8,26 @@ if __name__ == '__main__':
     # TODO)
     #  1. Use a boolean variable to indicate if it is the weekend.
     #     Display a different message to the user depending on whether it is
-    #     the weekend or not.
+    #     the weekend or not
+
+    is_weekend = True
+    if is_weekend:
+        print("Have fun and relax!")
+
+    if not is_weekend:
+        print("Hope you have a good time at school or work!")
     #  2. Use a boolean variable to indicate if a student passed an exam.
     #     Display a different message to the user depending on whether they
     #     passed or not.
+    passed_exam = True
+    if passed_exam:
+        print("Good job!")
+
+    if not passed_exam:
+        print("Aw man! Better luck next time")
     #  3. Use a boolean variable to indicate if a game is over. When the game
     #     is over, tell the user.
+
     #  4. Use two boolean variables, one to indicate if a shape should be red,
     #     the other to indicate if the shape is to be square. When both
     #     variables are true, use a turtle to draw a red square.
