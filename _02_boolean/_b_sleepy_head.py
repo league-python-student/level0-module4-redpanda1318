@@ -28,6 +28,10 @@ if __name__ == '__main__':
     #  3. Use a boolean variable to indicate if a game is over. When the game
     #     is over, tell the user.
 
+    game_over = True
+    while game_over:
+        simpledialog.askstring()
+
     #  4. Use two boolean variables, one to indicate if a shape should be red,
     #     the other to indicate if the shape is to be square. When both
     #     variables are true, use a turtle to draw a red square.
