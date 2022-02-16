@@ -2,9 +2,11 @@
 Use boolean variables to control program logic between two different code
 paths.
 """
-
+from tkinter import messagebox, simpledialog, Tk
 
 if __name__ == '__main__':
+    window = Tk()
+    window.withdraw()
     # TODO)
     #  1. Use a boolean variable to indicate if it is the weekend.
     #     Display a different message to the user depending on whether it is
@@ -30,9 +32,32 @@ if __name__ == '__main__':
 
     game_over = True
     while game_over:
-        simpledialog.askstring()
+        over = simpledialog.askstring("Title","Game over")
+        if over == "Game over":
+            game_over = False
 
     #  4. Use two boolean variables, one to indicate if a shape should be red,
     #     the other to indicate if the shape is to be square. When both
     #     variables are true, use a turtle to draw a red square.
+
+    import turtle
+
+    Color = simpledialog.askstring("Shape","Do you want your shape to be red?")
+    shape = simpledialog.askstring("Shape","Do you want your shape to be a square?")
+
+    random = turtle.Turtle()
+    random.shape('turtle')
+    random.speed(4)
+    random.color('red')
+    random.pencolor('red')
+
+
+    if Color == "yes" and shape == "yes":
+        for i in range(4):
+            random.forward(100)
+            random.right(90)
+
+
+
+
     pass
